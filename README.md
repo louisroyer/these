@@ -7,7 +7,7 @@ L’*edge computing* consiste à traiter les données au plus près des utilisat
 En rapprochant les ressources de calcul et de stockage, il permet de réduire la latence, d’améliorer la qualité d’expérience et de répondre aux besoins de nouveaux domaines d’applications tels que les villes intelligentes, l’agriculture connectée, les véhicules autonomes ou encore la réalité augmentée.
 
 Alors que les opérateurs déploient d’ores et déjà à grande échelle des réseaux mobiles de cinquième génération (5G), ceux-ci ne sont paradoxalement que très peu ou pas intégrés à l’*edge computing*.
-Malgré des efforts de standardisation, avec notamment l’architecture de *multi-access edge computing* (MEC) de l’ETSI, la plupart des projets de cœurs de réseau~5G *open-source* n’implémentent pas encore cette architecture.
+Malgré des efforts de standardisation, avec notamment l’architecture de *multi-access edge computing* (MEC) de l’ETSI, la plupart des projets de cœurs de réseau 5G *open-source* n’implémentent pas encore cette architecture.
 De plus, les méthodes d’intégration proposées limitent à la fois le passage à l’échelle et la capacité de l’opérateur à apporter des garanties de qualité de service (QoS).
 
 L’objectif de cette thèse est de proposer des solutions permettant l’intégration forte de l’*edge computing* dans les réseaux 5G.
