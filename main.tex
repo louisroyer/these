@@ -1,0 +1,123 @@
+%% -*- latex-command: lualatex -*-
+%
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+%
+%
+% To compile locally (outside of ShareLaTeX), use the following command:
+%   make
+%
+% If compilation fails or if you have rendering issues,
+% make sure to have the following packages installed (debian 12):
+%   make biber texlive-lualatex texlive-bibtex-extra texlive-lang-french texlive-fonts-extra
+%
+% To compile inside ShareLaTeX, make sure to set the latex engine to "lualatex".
+% This is the most modern version of latex engine currently, and it allows to create lua packages,
+% which have many benefits in comparison with LaTeX packages (very hard to write, read, and debug)
+% or call to python script (need to pass `--shell-escape` argument to latex engine, and very slow compilation
+% (so slow it can fails to build in ShareLaTeX when the document is big,
+% even when timeout has been disabled in ShareLaTeX),
+% no need to use external files to keep track of state between call to commands)
+
+% Chapters can be individually compiled (to make editing easier), but:
+% - links to glossary will be disabled (because glossary chapter will not be included) 
+% - first usage of glossary term within the chapter will be full expanded
+%   (while with a full compilation only the first usage of within the full document will be expanded)
+%   resulting in some page layout alteration
+% - page headers/numbering will not be the same as with the full compilation
+%   (so you should **not** compile each chapter individually and concatenate them).
+% - bibliography numbering will not be the same as wih the full compilation
+%
+% When creating new chapters, you must make the basename of each chapter different
+% (you cannot name each file `main.tex`, and have only the directory being different). 
+% Failure to do that will almost certainly result in errors.
+% Also, with the current version of luaglossary, there is some limitations on path depth:
+% - at root of the project: OK
+% - inside a folder: OK (but you should call `\initSufile` at start of document)
+% - inside a subfolder: NOT OK
+
+\documentclass{These}
+
+% Bibliography
+\addbibresource{biblio.bib}
+
+\begin{document}
+
+\title{Architecture de contrôle pour l’intégration de l’\textit{edge computing} dans les réseaux mobiles 5G}
+\author{Louis Royer}
+
+\makeatletter
+\hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@author},
+    pdfsubject={Informatique et télécommunications},
+    pdfkeywords={5G; Multi-Access Edge Computing; réseaux mobiles; Mobiles Networks ; redirection de trafic ; Traffic Steering ; gestion de ressources ; Resource Management ; routage par segments ; Segment Routing},
+    bookmarksnumbered=true
+}
+\pdfbookmark{\@title}{title}
+\makeatother
+
+\couverture{00_preface/couverture_these.pdf} % page de garde à générer sur ADUM
+
+\frontmatter % page number style = roman
+
+% abstract
+\subfile{00_preface/en_abstract}
+\subfile{00_preface/fr_abstract}
+
+% remerciements
+\cleardoublepage
+\subfile{00_preface/remerciements}
+
+% citation
+\cleardoublepage
+\subfile{00_preface/citation}
+
+% licence
+\cleardoublepage
+\subfile{00_preface/licence}
+
+% table des matière
+\dominitoc
+\cleardoublepage % table des matière commence sur une page de droite
+\phantomsection
+\label{ch:toc}
+\pdfbookmark[0]{Table des matières}{ch:toc} % ajout du lien vers la table des matières dans les métadonnées du PDF, mais pas dans le toc imprimé
+\tableofcontents
+
+\ContentTitleFormat % mise en forme du titre des chapitres 
+
+\begin{refsection}
+% glossaire
+\subfile{00_preface/glossary}
+\mainmatter % page number style = arabic
+
+% chapitres
+\subfile{01_intro/intro}
+\subfile{11_overview_5G_edge/overview_5G_edge}
+\addtocontents{toc}{\protect\pagebreak} % pour éviter que le titre du 2ème chapitre se retrouve séparé du reste dans le TOC
+\subfile{12_state_of_the_art/state_of_the_art}
+\addtocontents{toc}{\protect\enlargethispage{2.5\baselineskip}} % pour éviter que la dernière section se retrouve séparée du reste dans le TOC
+\addtocontents{toc}{\protect\pagebreak} % pour éviter que le titre du 2ème chapitre se retrouve séparé du reste dans le TOC
+\subfile{13_edge_services_integration/edge_services_integration}
+\addtocontents{toc}{\protect\vfill} % toc des chapitres 3 et 4 sur la même page, il faut éviter d’avoir des espaces énormes entre les section 4.3.1.1 et 4.3.1.2
+\subfile{14_mobility/mobility}
+\addtocontents{toc}{\protect\enlargethispage{1\baselineskip}} % pour éviter que la dernière sous-section se retrouve séparée du reste dans le TOC
+\subfile{15_testbed_and_eval/testbed_and_eval}
+\subfile{20_conclusion/conclusion}
+
+\subfile{30_postface/contributions}
+
+\checkglossaryuse
+
+% bibliographie
+\begin{sloppypar} % pour éviter que les URL débordent
+\printbibliography
+\end{sloppypar}
+\addcontentsline{toc}{chapter}{Bibliographie}
+\addtocontents{toc}{\protect\clearpage}
+\end{refsection}
+
+\PostContentTitleFormat
+\quatriemeDeCouverture{30_postface/4e_de_couverture_these.pdf} % page de garde à générer sur ADUM
+\end{document}

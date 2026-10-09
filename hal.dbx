@@ -1,0 +1,6 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+\ProvidesFile{hal.dbx}[2024-10-21 Add HAL field]
+
+\DeclareDatamodelFields[type=field, datatype=literal]{hal}
+\DeclareDatamodelEntryfields{hal}

@@ -1,0 +1,48 @@
+% Copyright Louis Royer. All rights reserved.
+% Use of this source code is governed by a MIT-style license that can be
+% found in the LICENSE file.
+% SPDX-License-Identifier: MIT
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+
+\ProvidesClass{luaglossary/luaglossary}
+\RequirePackage{luacode}
+\RequirePackage{hyperref}
+\RequirePackage{subfiles}
+
+% pour charger lorsque l’on veut compiler seulement un subfile (pas optimal, mais évite au moins les erreurs de compilation)
+\ifSubfilesClassLoaded{%
+    \luadirect{ dofile ( '../luaglossary/luaglossary.lua' ) }
+}{
+    \luadirect{ dofile ( 'luaglossary/luaglossary.lua' ) }
+}
+
+% charge le fichier json du glossaire: doit être appelé avant d’appeler les autres commandes de glossary
+\newcommand{\loadluaglossary}[2][]{\luadirect{luaglossary.load(\luastring{#2}, \luastring{#1})}}
+% affichage d’une entrée en anglais
+\newcommand{\acren}[1]{\luadirect{luaglossary.acren(\luastring{#1})}}
+% affichage d’une entrée en anglais au pluriel
+\newcommand{\acrenpl}[1]{\luadirect{luaglossary.acrenpl(\luastring{#1})}}
+% affichage d’une entrée en français
+\newcommand{\acrfr}[1]{\luadirect{luaglossary.acrfr(\luastring{#1})}}
+% affichage d’une entrée en français au pluriel
+\newcommand{\acrfrpl}[1]{\luadirect{luaglossary.acrfrpl(\luastring{#1})}}
+
+% fait le lien vers une entrée du glossaire (et donc de la marquer comme utilisée) avec un affichage personnalisé
+\newcommand{\gl}[2]{\luadirect{luaglossary.gl(true, \luastring{#1}, \luastringN{#2})}}
+
+% fait le lien vers une entrée du glossaire (et donc de la marquer comme utilisée) avec un affichage personnalisé,
+% mais ne marque pas l’entrée comme « utilisée » (utile pour l’introduction
+\newcommand{\glx}[2]{\luadirect{luaglossary.gl(false, \luastring{#1}, \luastringN{#2})}}
+
+
+% affiche le glossaire et vérifie que toutes les entrées sont utilisées
+% limitation technique:
+%   le glossaire ne peut s’afficher qu’à la fin,
+%   sauf si on accepte de ne pas vérifier que les termes sont tous utilisés avec print_unsafe
+%   (on peut alors appeler checkglossaryuse à la fin du document pour vérifier)
+\newenvironment{printGlossary}{\luadirect{luaglossary.print_glossary_header()}}{\luadirect{luaglossary.print_glossary_body()}}
+
+% affiche le glossaire sans vérifier que toutes les entrées sont utilisées
+\newenvironment{printGlossaryUnsafe}{\luadirect{luaglossary.print_glossary_header()}}{\luadirect{luaglossary.print_glossary_body(true)}}
+% vérifie que toutes les entrées sont utilisées
+\newcommand{\checkglossaryuse}[0]{\luadirect{luaglossary.check_use()}}

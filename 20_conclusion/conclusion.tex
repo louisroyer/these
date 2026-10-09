@@ -1,0 +1,66 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\initSubfile
+\chapter*{Conclusion et perspectives}
+\label{ch:conclusion-perspectives}
+\addcontentsline{toc}{chapter}{Conclusions et perspectives}
+\markboth{}{Conclusion et perspectives}
+
+\section*{Conclusion}
+Dans ce travail, nous nous sommes intéressés à l’intégration de l’\textit{edge computing} dans les réseaux~5G.
+L’objectif de cette intégration est de s’adapter aux nouvelles exigences des applications en offrant des capacités de stockage et de calcul en bordure du réseau, à proximité des utilisateurs.
+L’intégration du paradigme \textit{edge} débloque l’usage d’applications temps-réel sur des équipements contraints en ressources, et constitue donc un enjeu crucial pour l’avenir des réseaux mobiles.
+
+Pour atteindre cet objectif global, nous avons proposé un ensemble de propriétés que l’intégration doit garantir afin de pouvoir être mise en œuvre dans des réseaux réels, puis effectué un état de l’art des travaux de standardisation et de recherche liés à l’\textit{edge computing}.
+Nous avons constaté que malgré le grand intérêt porté par les industriels à cette architecture, les méthodes standardisées permettant le développement des prémices de l’\textit{edge computing} ne sont pas encore suffisantes pour réaliser son déploiement massif.
+
+Nous avons proposé une architecture qui repose sur le \gl{SR}{routage par segments} pour intégrer le paradigme \textit{edge} dans des réseaux~5G existants.
+Cette intégration est entièrement transparente pour l’utilisateur, et permet à l’opérateur d’apporter des garanties sur la \gl{QoS}{qualité de service} puisqu’il a le plein contrôle sur la sélection des \gl{service/instances}{instances}.
+Notre proposition d’architecture permet de réduire considérablement la charge sur le plan de contrôle~5G, pavant la route vers des déploiements à grande échelle.
+Pour rendre possible l’allocation dynamique de ressources dans l’architecture globale, nous avons créé un modèle de «~politique \textit{edge}~» sur lequel se fonde notre architecture pour établir et en maintenir dynamiquement des chemins d’accès entre les abonnés et des applications distribuées en dirigeant le trafic des \gl{user}{abonnés} vers l’\gl{edge}{\textit{edge}} le plus adapté à chaque situation.
+Cette architecture offre l’isolation des ressources de manière transparente entre les différentes communications et permet d’offrir des garanties de qualité de service.
+Et enfin, nous proposons des procédures qui assurent une intégration forte de notre architecture avec la gestion de la mobilité des réseaux~5G en garantissant non seulement une continuité de service au travers de mécanismes de changement d’instance avec préservation de session, mais également le maintien du niveau de \gl{QoS}{qualité de service} en tirant parti des déplacements de l’\gl{user}{utilisateur}.
+
+Pour valider nos propositions, nous avons développé une plateforme d’expérimentation qui intègre plusieurs versions alternatives des composants fonctionnels de la 5G de manière virtualisée et modulaire.
+Cette plateforme implémente en particulier notre proposition d’architecture~SR4MEC et met en exergue sa compatibilité avec des \gl{CUPS}{cœurs de réseau}~5G réels non modifiés.
+Elle implémente également une émulation de réseau~5G permettant de valider notre architecture dans des scénarios de mobilité.
+Nous avons publié cette plateforme et tous ses modules sous une licence libre et \textit{open-source} afin de la rendre ré-utilisable et modifiable par la communauté.
+
+\pagebreak
+Au-delà des concepts proposés, ce travail montre qu’il est possible d’intégrer l’\textit{edge computing} dans les réseaux~5G sans remettre en cause les fonctions existantes du \gl{CN}{cœur de réseau}.
+En déplaçant l’intelligence de sélection et d’accès vers une couche de contrôle basée sur du \gl{SR}{routage par segments}, l’architecture et les mécanismes proposés concilient compatibilité avec les déploiements actuels, contrôle opérateur, transparence pour l’utilisateur et adaptation dynamique aux conditions du réseau.
+Ces résultats constituent une première étape vers des architectures mobiles plus fortement distribuées, mais plusieurs verrous restent à lever pour permettre des déploiements plus autonomes, plus dynamiques et adaptés aux futures générations de réseaux.
+
+\enlargethispage{1\baselineskip}
+\section*{Perspectives}
+Nous présentons dans cette section quelques ouvertures de recherches qui étendent la problématique abordée dans cette thèse.
+
+\subsection*{Automatisation des politiques \textit{edge}}
+Une première perspective concerne l’automatisation de la définition des politiques \textit{edge}.
+Dans notre travail, nous avons considéré que la politique \textit{edge} était définie statiquement par l’opérateur.
+Cette politique permet d’associer une combinaison formée par une \gl{slice}{\textit{slice}}, une \textit{area} et un \gl{service/instances}{service} à un \gl{edge}{\textit{edge}} donné.
+Cette modélisation offre un cadre simple et contrôlable, mais elle ne permet pas d’adapter automatiquement le comportement du réseau aux variations de l’environnement.
+Or, dans un réseau réel, la répartition des utilisateurs, la densité locale du trafic, le nombre de demandes pour chaque \gl{service/instances}{service}, la charge des \gl{service/instances}{instances}, la consommation énergétique des infrastructures ou encore les prévisions de mobilité peuvent évoluer rapidement.
+
+Quelles approches mettre en place pour être capable de générer, d’adapter ou de recommander automatiquement des politiques \textit{edge} à partir de ces informations?
+
+\subsection*{Intégration avec les réseaux non-terrestres}
+L’intégration des réseaux non-terrestres dans les futures générations de réseaux mobiles fait émerger une nouvelle forme d’\textit{edge computing}, le \textit{space edge computing}~\cite{10.1109/COMST.2025.3579525}, qui apporte de nouvelles contraintes de routage.
+La topologie du réseau est en évolution permanente, si bien que les ressources \textit{edge} qui peuvent être embarquées dans le réseau satellitaire se déplacent par rapport à l’utilisateur, et que les routes inter-satellites doivent être mises à jour très fréquemment.
+Une architecture de routage pour les réseaux satellitaires a été proposée dans la RFC~9717~\cite{rfc9717} et se base sur le \gl{SR}{routage par segments} (avec un plan de données \gl{MPLS}{MPLS}).
+
+Quelles évolutions de notre architecture~SR4MEC sont nécessaires pour intégrer les réseaux non-terrestres et le \textit{space edge computing}?
+Faut-il intégrer une dimension temporelle à la politique \textit{edge} afin de sélectionner un \gl{edge}{\textit{edge}} qui restera pertinent pendant une durée suffisante?
+
+\subsection*{Gestion de la multi-connectivité}
+
+La fonctionnalité optionnelle «~\textit{Access Traffic Steering, Switching and Splitting} (ATSSS)~\cite{10.1109/APCC47188.2019.9026455,3GPP.TS.24.193}~» de la 5G permet l’usage simultané de technologies d’accès \gl{3GPP}{3GPP} et non-\gl{3GPP}{3GPP} (par exemple Wi-Fi). 
+Cette fonctionnalité nécessite l’utilisation de protocoles de transport gérant les chemins multiples tels que \textit{Multipath TCP} (MPTCP)~\cite{rfc8684} ou l’extension \textit{Multipath} de QUIC~\cite{ietf-quic-multipath-21,10.1109/MCOMSTD.0006.2200056}.
+
+Lors de la conception de l’architecture~SR4MEC, nous n’avons considéré que les réseaux~3GPP, et n’avons pas traité l’usage simultané de plusieurs technologies d’accès.
+
+Est-il possible d’intégrer la gestion de la multi-connectivité à notre proposition d’architecture? Est-il envisageable de mettre en relation simultanée plusieurs \gl{service/instances}{instances d’un même service} avec une seule \gl{PDU Session}{session~PDU} selon l’interface d’accès utilisée?
+
+\end{document}

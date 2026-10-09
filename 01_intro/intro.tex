@@ -1,0 +1,131 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\initSubfile
+\dummylabel{ch:overview-5G-edge}{1}
+\dummylabel{ch:state-of-the-art}{2}
+\dummylabel{ch:edge-services-integration}{3}
+\dummylabel{ch:mobility}{4}
+\dummylabel{ch:testbed}{5}
+\dummylabel{ch:conclusion-perspectives}{} % unnumbered
+
+\chapter*{Introduction}
+\label{ch:introduction}
+\addstarredchapter{Introduction}
+\markboth{Introduction}{}
+
+\begingroup
+\setlength{\parskip}{2em}
+
+\section*{Contexte et problématique de la thèse}
+Le \textit{smartphone} est désormais un équipement possédé presque universellement par la population et a su s’inscrire dans la vie quotidienne au travers d’une grande diversité d’usages~\cite{CREDOC.2026.BAROMETRE.NUMERIQUE}.
+L’un des ingrédients indispensables de ce succès mondial est l’infrastructure de télécommunication qui n’a jamais cessé d’évoluer pour s’adapter aux nouvelles exigences des applications (notamment la latence et le débit).
+
+Pour satisfaire à ces exigences et s’adapter aux besoins de chaque application, les réseaux mobiles de cinquième génération (5G) doivent pouvoir mettre en œuvre de l’\textit{edge computing} afin d’offrir des capacités de stockage et de calcul à la périphérie du réseau, proche des utilisateurs.
+Le paradigme \textit{edge} permet d’améliorer la rapidité de réaction, prérequis au temps-réel, mais également la \glx{QoE}{qualité d’expérience}~globale.
+
+Aujourd'hui, les opérateurs déploient les réseaux 5G à grande échelle, et il est attendu pour la 6G une couverture mondiale s’appuyant sur l’intégration des réseaux \glx{NTN}{non-terrestres}.
+Les caractéristiques des réseaux de transports satellite, dont la bande passante est limitée et la latence élevée, amplifient le besoin d’une intégration de l’\textit{edge} aux réseaux mobiles.
+
+Pourtant, peu de travaux de recherche ou d’implémentations \textit{open-source} ont étudié les problématiques d’intégration de l’\textit{edge} dans l’architecture~5G.
+La difficulté ne réside pas seulement dans le choix de la meilleure instance \textit{edge}, mais également dans la capacité à rendre ce choix effectif dans le réseau, en configurant dynamiquement le \glx{CUPS}{plan de données} tout en restant compatible avec les mécanismes de contrôle de la~5G.
+
+
+Pour permettre cette intégration, plusieurs verrous technologiques et scientifiques doivent être levés:
+\begin{itemize}
+    \item Rendre possible l’allocation dynamique de ressources dans l’architecture globale (dont le contrôle de leur localisation) en prenant en compte les exigences des applications;
+    \item Rendre possible l’isolation des ressources de manière transparente entre les différentes communications pour pouvoir offrir des garanties de qualité de service;
+    \item Gérer la mobilité afin de maintenir une continuité de service.
+\end{itemize}
+\endgroup
+
+\pagebreak
+Plus spécifiquement, nous étudions les alternatives d’architecture permettant l’intégration des concepts de l’\textit{edge computing} avec les réseaux~5G.
+Nous cherchons à répondre à plusieurs problématiques:
+\begin{itemize}
+    \item Comment permettre à un opérateur d’exprimer des politiques \textit{edge} abstraites, dépendant notamment de la zone géographique et du service demandé, puis de les traduire automatiquement en règles de routage dans le \glx{CUPS}{plan de données}?
+    \item Comment diriger le trafic utilisateur vers l’instance sélectionnée, de manière transparente pour l’\glx{user}{abonné} et compatible avec les réseaux~5G existants?
+    \item Dans le paradigme de l’\textit{edge computing}, les services sont déployés de manière dynamique: comment prendre en compte l’évolution du déploiement?
+    \item Dans les réseaux~5G, les utilisateurs sont mobiles: comment préserver les sessions existantes avec les \glx{service/instances}{services~\textit{edge}}?
+    \item Comment prendre en compte les événements de mobilité pour déclencher un changement d’\glx{edge}{\textit{edge}} de manière transparente pour l’utilisateur?
+\end{itemize}
+
+\section*{Contributions}
+Outre le travail d’état de l’art, nous présentons dans cette section les principales contributions qui résultent de notre travail de thèse.
+
+\subsection*{Architecture SR4MEC pour l’intégration contrôlée de services \textit{edge} dans les réseaux 5G}
+Pour répondre aux différentes problématiques énumérées dans la section précédente, nous proposons une architecture, appelée SR4MEC, qui permet à l’opérateur d’exprimer des politiques \textit{edge} de haut niveau dans le \glx{CUPS}{plan de contrôle}.
+Ces politiques associent une \glx{slice}{\textit{slice}}, une zone géographique et un \glx{service/instances}{service à une instance} ou à un \glx{edge}{\textit{edge}} cible.
+Elles permettent par exemple de diriger deux \glx{user}{abonnés} demandant le même \glx{service/instances}{service vers des instances} différentes selon leur région ou selon le réseau virtuel auquel appartient leur session.
+
+L’infrastructure traduit ensuite automatiquement ces politiques abstraites en règles de configuration du \glx{CUPS}{plan de données}.
+Cette traduction s’appuie sur le \glx{SR}{routage par segments}, et plus particulièrement sur \glx{SRv6}{SRv6}, afin de réaliser la redirection de trafic vers l’\gl{service/instances}{instance} spécifiée tout en réduisant les états à maintenir dans le réseau.
+La sélection et l’accès à l’\glx{service/instances}{instance} sont contrôlés par l’opérateur et restent transparents pour l’\glx{UE}{équipement utilisateur}.
+
+Cette contribution peut être décomposée comme suit:
+\begin{itemize}
+    \item Modélisation de politiques \textit{edge} pour mettre en relation un utilisateur avec une instance~\textit{edge};
+    \item Traduction automatique des politiques en règles de routage \glx{SRv6}{SRv6} pour orienter le trafic utilisateur;
+    \item Création d’une procédure de changement dynamique d’\glx{service/instances}{instance} sans interruption d’accès au \glx{service/instances}{service};
+    \item Intégration de l’architecture avec les procédures de \glx{handover}{\textit{handover}}, avec préservation ou changement immédiat de l’instance~\textit{edge}.
+\end{itemize}
+
+\pagebreak
+\begingroup
+\setlength{\parskip}{1.5em}
+\subsection*{Plateforme d’expérimentation dédiée à l’intégration de l’\textit{edge} dans les réseaux~5G}
+Notre seconde contribution est la conception et le développement d’une plateforme d’expérimentation permettant d’évaluer l'intégration de \glx{service/instances}{services \textit{edge}} dans des réseaux~5G réels ou émulés.
+Cette plateforme ne se limite pas à la simulation de scénarios abstraits: elle s’appuie sur des composants réseau fonctionnels, compatibles avec les interfaces du \glx{CN}{cœur~5G}, afin d'étudier concrètement l’impact de notre architecture sur le \glx{CUPS}{plan de contrôle et le plan de données}.
+
+Un élément central de cette plateforme est l'implémentation d'un \glx{controller}{contrôleur}~SR4MEC compatible avec l’interface \glx{PFCP}{PFCP} utilisée par le \glx{SMF}{SMF}~5G.
+Du point de vue du \glx{CN}{cœur de réseau}, ce \glx{controller}{contrôleur} se comporte comme un \glx{UPF}{UPF} classique.
+Il reçoit donc les règles produites par le \glx{SMF}{SMF} lors de l’établissement, de la modification ou de la libération des \glx{PDU Session}{sessions~PDU}.
+À partir de ces informations, il applique les politiques \textit{edge} définies par l’opérateur, puis configure automatiquement les passerelles et \textit{endpoints}~\glx{SRv6}{SRv6} afin d'orienter le trafic utilisateur vers l’\glx{service/instances}{instance de service} sélectionnée.
+
+Cette plateforme permet ainsi de valider expérimentalement le principe de traduction entre des politiques \textit{edge} abstraites, exprimées dans le \glx{CUPS}{plan de contrôle}, et des règles concrètes de redirection de trafic dans le \glx{CUPS}{plan de données}.
+Elle permet également d’évaluer les procédures de changement d’instance et de mobilité, en comparant notre architecture à une architecture~5G classique.
+
+Cette contribution peut être décomposée comme suit:
+\begin{itemize}
+    \item Intégration de composants tiers pré-existants au sein d’une plateforme virtualisée et modulaire;
+    \item Développement d’un \glx{UPF}{UPF}~5G classique fonctionnant dans l’espace utilisateur, servant d’implémentation de référence;
+    \item Développement d’un \glx{controller}{contrôleur}~SR4MEC compatible \glx{PFCP}{PFCP}, capable d’interagir avec le \glx{SMF}{SMF}~5G, d’appliquer des politiques \textit{edge} et de configurer automatiquement le \glx{CUPS}{plan de données}~\glx{SRv6}{SRv6};
+    \item Implémentation de passerelles et d’\textit{endpoints}~\glx{SRv6}{SRv6} permettant la redirection transparente du trafic utilisateur vers les \glx{service/instances}{instances \textit{edge}} sélectionnées;
+    \item Développement d’un émulateur de \glx{RAN}{réseau d’accès} et de \glx{CUPS}{plan de contrôle}~5G permettant de reproduire des scénarios de mobilité et d’évaluer les procédures de \glx{handover}{\textit{handover}}.
+\end{itemize}
+\endgroup
+
+\pagebreak
+\section*{Plan du manuscrit}
+Cette section présente la structure générale du manuscrit qui s’organise, après cette introduction, en cinq chapitres suivis d’une conclusion générale.
+
+\begin{itemize}
+    \item \hyperref[ch:overview-5G-edge]{\textbf{Chapitre~1}}:
+    Dans ce chapitre, nous présentons un \textbf{aperçu des réseaux mobiles de 5\textsuperscript{ème}~génération et de l’\textit{edge computing}}
+     ainsi que les enjeux liés à leur intégration.
+     Nous re-traçons d’abord les évolutions des réseaux mobiles au cours des générations, puis exposons les principes de l’\textit{edge computing} comme modèle complémentaire au \textit{cloud computing} en soulignant son rôle central dans le traitement distribué de données et l’optimisation des performances.
+
+    \item \hyperref[ch:state-of-the-art]{\textbf{Chapitre~2}}:
+    Dans ce chapitre, nous effectuons un \textbf{état de l’art des travaux intégrant de l’\textit{edge} dans la 5G}.
+    Nous abordons ce chapitre en définissant nos exigences pour cette intégration.
+    Puis nous présentons les différents protocoles et architectures qui ont été publiés par les organismes de standardisation avant de faire la revue des travaux de recherche liés à l’\textit{edge computing}.
+
+    \item \hyperref[ch:edge-services-integration]{\textbf{Chapitre~3}}:
+    Nous présentons dans ce chapitre notre architecture permettant l’\textbf{intégration de services~\textit{edge} dans des réseaux~5G existants}.
+    Nous expliquons nos choix de conception, et montrons que cette architecture permet de satisfaire aux exigences d’intégrations que nous avions définit dans le chapitre précédent.
+    Nous décrivons les différentes étapes qui permettent de mettre en place et d’accéder à des services \textit{edges} dans le cas d’un utilisateur statique, et analysons l’impact de notre architecture sur le plan de contrôle.
+
+    \item \hyperref[ch:mobility]{\textbf{Chapitre~4}}:
+    Ce chapitre présente notre contribution sur la \textbf{gestion de la mobilité} et son intégration dans l’architecture que nous proposons.
+    Nous montrons que notre architecture est capable de prendre en compte les \glx{handover}{\textit{handovers}} de manière compatible avec l’existant, et de préserver la continuité de la session des utilisateurs.
+    Nous étudions également l’impact sur le \glx{CUPS}{plan de contrôle} des différentes procédures que nous proposons.
+    \item \hyperref[ch:testbed]{\textbf{Chapitre~5}}:
+    Au sein de ce chapitre, nous présentons notre \textbf{plateforme d’expérimentation} libre et open-source qui permet le déploiement d’un cœur de réseau~5G non simulé et de réseaux d’accès émulés ou réels.
+    Nous utilisons cette plateforme pour \textbf{évaluer}, notre architecture la comparer à une architecture~5G classique, et la tester dans des scénarios de mobilité.
+
+    \item \hyperref[ch:conclusion-perspectives]{\textbf{Conclusion et perspectives}}:
+    Ce chapitre final fait la synthèse nos contributions et expose les perspectives d’évolution de nos travaux.
+
+\end{itemize}
+\end{document}

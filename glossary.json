@@ -1,0 +1,1081 @@
+{
+    "CN": {
+        "index": "cœur de réseau",
+        "short": "CN",
+        "en": "Core Network",
+        "fr": "cœur de réseau",
+        "ref": "sec:CN",
+        "desc": "L’architecture d’un réseau mobile peut se séparer entre le \\hyperref[glossary:RAN]{réseau d’accès} et le cœur de réseau. À partir de la 4G, le cœur est \\hyperref[glossary:CUPS]{séparé entre le plan de contrôle et plan de données (\\textit{Control and User Plane Separation}, CUPS)}. Le \\hyperref[glossary:5GC]{cœur de réseau 5G (5GC)} adopte une \\hyperref[glossary:SBA]{architecture basée sur des services (\\textit{Service Based Architecture}, SBA)}, et est constitué de différentes \\hyperref[glossary:NF]{fonctions réseau (\\textit{Network Functions},~NFs)}."
+    },
+    "5GC": {
+        "index": "5GC",
+        "short": "5GC",
+        "en": "5G Core",
+        "shortdesc": "\\hyperref[glossary:CN]{cœur de réseau} 5G, par opposition à l’\\hyperref[glossary:ePC]{ePC} en 4G"
+    },
+    "ePC": {
+        "index": "ePC",
+        "short": "ePC",
+        "en": "evolved Packet Core",
+        "shortdesc": "\\hyperref[glossary:CN]{cœur de réseau} 4G, par opposition au \\hyperref[glossary:5GC]{cœur de réseau 5G (5GC)}"
+    },
+    "LTE": {
+        "print": false,
+        "short": "LTE",
+        "en": "Long Term Evolution"
+    },
+    "3GPP": {
+        "index": "3gpp",
+        "short": "3GPP",
+        "en": "3rd Generation Partnership Project",
+        "desc": "Le 3GPP est le consortium qui produit et publie les spécifications techniques des réseaux mobiles. Il~a été créé en décembre 1998 pour développer, maintenir, et faire évoluer les standards de la 3G et il poursuit sa mission avec les standards 5G et bientôt 6G."
+    },
+    "ETSI": {
+        "index": "etsi",
+        "short": "ETSI",
+        "en": "European Telecommunications Standards Institute",
+        "desc": "L’ETSI est l’institut européen des normes de télécommunications. Cet organisme est membre du~\\hyperref[glossary:3GPP]{3GPP}."
+    },
+    "NSA": {
+        "print": false,
+        "short": "NSA",
+        "en": "Non-Standalone"
+    },
+    "SA": {
+        "print": false,
+        "short": "SA",
+        "en": "Standalone"
+    },
+    "RAN": {
+        "index": "radio access network",
+        "short": "RAN",
+        "en": "Radio Access Network",
+        "ref": "sec:RAN"
+    },
+    "E-UTRAN": {
+        "index": "e-utran",
+        "short": "E-UTRAN",
+        "en": "Evolved Universal Terrestrial Radio Access Network",
+        "shortdesc": "nom du \\hyperref[glossary:RAN] en 4G"
+    },
+    "IIoT": {
+        "print": false,
+        "short": "IIoT",
+        "en": "Industrial Internet of Things",
+        "fr": "Internet des objets pour l’industrie"
+    },
+    "IoT": {
+        "print": false,
+        "short": "IoT",
+        "en": "Internet of Things",
+        "fr": "Internet des objets"
+    },
+    "CITS": {
+        "print": false,
+        "short": "CITS",
+        "en": "Cooperative Intelligent Transport System",
+        "fr": "systèmes de transport intelligents coopératifs"
+    },
+    "O-RAN": {
+        "print": false,
+        "short": "O-RAN",
+        "fr": "OpenRAN",
+        "_comment": "en fr plutôt qu’en en pour éviter l’italique"
+    },
+    "XR": {
+        "print": false,
+        "short": "XR",
+        "en": "Extended Reality",
+        "fr": "réalité augmentée"
+    },
+    "eMBB": {
+        "print": false,
+        "short": "eMBB",
+        "en": "enhanced Mobile Broadband"
+    },
+    "URLLC": {
+        "print": false,
+        "short": "URLLC",
+        "en": "Ultra-reliable Low Latency Communications"
+    },
+    "MIoT": {
+        "print": false,
+        "short": "MIoT",
+        "en": "massive IoT"
+    },
+    "V2X": {
+        "print": false,
+        "short": "V2X",
+        "en": "Vehicule to Everything"
+    },
+    "HMTC": {
+        "print": false,
+        "short": "HMTC",
+        "en": "High Performance Machine-Type Communications"
+    },
+    "HDLLC": {
+        "print": false,
+        "short": "HDLLC",
+        "en": "High Data rate and Low Latency Communications"
+    },
+    "GBRSS": {
+        "print": false,
+        "short": "GBRSS",
+        "en": "Guaranteed Bit Rate Streaming Service"
+    },
+    "PDU Session": {
+        "index": "session pdu",
+        "en": "PDU Session",
+        "enpl": "PDU Sessions",
+        "fr": "session PDU",
+        "frpl": "sessions PDU",
+        "desc": "En 5G, une session~PDU fournit une connectivité de bout-en-bout entre un \\hyperref[glossary:UE]{équipement utilisateur} et un \\hyperref[glossary:DN]{réseau de données}. Le type de données transportées n’est pas restreint aux paquets~IP: il est prévu par le standard de pouvoir utiliser d’autres types de données, comme des frames ethernet ou autres structures non spécifiées (\\textit{unstructured}). C’est pourquoi en 5G on parle désormais de «~\\hyperref[glossary:PDU]{PDUs}~», notion plus large que celle de «~paquets~».",
+        "ref": "sec:pdu-session"
+    },
+    "PDU Session-voir": {
+        "print": true,
+        "index": "pdu session",
+        "en": "PDU Session",
+        "voirref": "PDU Session",
+        "voirlabel": "session PDU"
+    },
+    "UE": {
+        "index": "equipement",
+        "short": "UE",
+        "shortpl": "UEs",
+        "fr": "équipement utilisateur",
+        "frpl": "équipements utilisateur",
+        "en": "User Equipment",
+        "enpl": "User Equipments",
+        "desc": "Un équipement utilisateur est l’appareil d’un \\hyperref[glossary:user]{abonné}~; il se connecte au réseau mobile en utilisant son interface radio et est identifié par son \\hyperref[glossary:IMSI]{IMSI}. Par exemple un \\textit{smartphone}, un objet connecté, un véhicule connecté, etc."
+    },
+    "UE-voir": {
+        "print": true,
+        "index": "user equipement",
+        "short": "UE",
+        "voirref": "UE",
+        "voirlabel": "équipement utilisateur"
+    },
+    "gNB": {
+        "index": "gnb",
+        "short": "gNB",
+        "alt": "gNodeB",
+        "shortpl": "gNBs",
+        "en": "Next Generation Node B",
+        "enpl": "Next Generation Nodes B",
+        "desc": "En 5G, la gNB est le nom de la \\hyperref[glossary:BS]{station de base}. Il s’agit de l’équipement responsable de l’émission et la réception \\hyperref[glossary:5G NR]{\\textit{New Radio}} vers les \\hyperref[glossary:UE]{équipements utilisateur}. Cet équipement est le successeur de l’eNB (\\textit{E-UTRAN Node B} ou \\textit{evolved Node B}) de la 4G."
+    },
+    "eNB": {
+        "print": true,
+        "index": "eNB",
+        "short": "eNB",
+        "voirref": "gNB",
+        "voirlabel": "gNB",
+        "shortdesc": "\\hyperref[glossary:BS]{station de base} pour la 4G"
+    },
+    "5G NR": {
+        "index": "nr",
+        "short": "NR",
+        "alt": "5G NR",
+        "en": "New Radio",
+        "shortdesc": "technologie d’accès radio de la 5G"
+    },
+    "SDN": {
+        "index": "sdn",
+        "short": "SDN",
+        "en": "Software Defined Networks",
+        "desc": "Le paradigme SDN consiste à programmer les équipements réseau depuis un \\hyperref[glossary:CUPS]{plan de contrôle qui est séparé fonctionnellement du plan de données}. Le \\hyperref[glossary:controller]{contrôleur SDN} a une vision globale du réseau dont il est responsable."
+    },
+    "CUPS": {
+        "index": "separation",
+        "short": "CUPS",
+        "en": "Control and User Plane Separation",
+        "enlong": true,
+        "fr": "séparation du plan de contrôle et du plan utilisateur",
+        "desc": "La séparation du plan de contrôle et du plan utilisateur (ou plan de données) est une approche \\hyperref[glossary:SDN]{SDN} qui a été généralisée dans les réseaux mobiles depuis la 4G. Les \\hyperref[glossary:PGW]{PGW} et \\hyperref[glossary:SGW]{SGW} y sont séparés chacune en 2 entités distinctes (\\hyperref[glossary:SGW]{SGW-U} et \\hyperref[glossary:PGW]{PGW-U} pour le plan utilisateur, \\hyperref[glossary:SGW]{SGW-C} et \\hyperref[glossary:PGW]{PGW-C} pour le plan de contrôle), et l’interface entre le contrôle et le plan utilisateur se fait désormais avec le protocole \\hyperref[glossary:PFCP]{PFCP}. Cette séparation permet de mieux gérer la mobilité et l’équilibrage de charge (\\textit{load-balancing}). En 5G, la répartition des fonctions logiques a évolué tout en conservant ce principe de séparation.",
+        "ref": "sec:CUPS"
+    },
+    "CUPS-voir": {
+        "print": true,
+        "index": "cups",
+        "short": "CUPS",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan utilisateur"
+    },
+    "UP": {
+        "print": true,
+        "index": "up",
+        "short": "UP",
+        "en": "User Plane",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan utilisateur"
+    },
+    "UP-voir-fr": {
+        "print": true,
+        "index": "plan utilisateur",
+        "fr": "plan utilisateur",
+        "fralt": "plan de données",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan utilisateur"
+    },
+    "CP": {
+        "print": true,
+        "index": "cp",
+        "short": "CP",
+        "en": "Control Plane",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan utilisateur"
+    },
+    "CP-voir-fr": {
+        "print": true,
+        "index": "plan de contrôle",
+        "fr": "plan de contrôle",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan~utilisateur"
+    },
+    "NFV": {
+        "index": "virtualisation des fonctions réseau",
+        "short": "NFV",
+        "en": "Network Function Virtualisation",
+        "fr": "virtualisation des fonctions réseau",
+        "desc": "La virtualisation des fonctions réseau permet de découpler le matériel physique et les couches logicielles. Les fonctions virtualisées permettent le \\hyperref[glossary:scalability]{passage à l’échelle} car il est ainsi possible d’utiliser du matériel générique dans des centres de données existants, plutôt que de déployer une infrastructure dédiée."
+    },
+    "NFV-voir": {
+        "print": true,
+        "index": "nfv",
+        "short": "NFV",
+        "en": "Network Function Virtualisation",
+        "voirref": "NFV",
+        "voirlabel": "virtualisation des fonctions réseau"
+    },
+    "VNF": {
+        "index": "fonction réseau virtuelle",
+        "short": "VNF",
+        "shortpl": "VNFs",
+        "en": "Virtual Network Function",
+        "enpl": "Virtual Network Functions",
+        "fr": "fonction réseau virtuelle",
+        "frpl": "fonctions réseau virtuelles",
+        "voirref": "NFV",
+        "voirlabel": "virtualisation des fonctions réseau",
+        "voirlong": true
+    },
+    "VNF-voir": {
+        "print": true,
+        "index": "vnf",
+        "short": "VNF",
+        "en": "Virtual Network Function",
+        "shortdesc": "fonction réseau virtuelle",
+        "voirref": "NFV",
+        "voirlabel": "virtualisation des fonctions réseau"
+    },
+    "PFCP": {
+        "index": "pfcp",
+        "short": "PFCP",
+        "en": "Packet Forwarding Control Protocol",
+        "desc": "En 5G, le protocole PFCP est utilisé par le \\hyperref[glossary:SMF]{SMF} pour configurer des règles de routage sur les \\hyperref[glossary:UPF]{UPFs} en prenant en compte la \\hyperref[glossary:QoS]{qualité de service}, et permet également de relever la consommation de données (à la fois pour permettre la facturation et pour la supervision du réseau). Cette configuration prend la forme de « sessions PFCP » qui contiennent chacune un ensemble de règles de \\textit{matching} (\\textit{Packet Detection Rule}, PDR) associées à un ensemble d’instructions qui indiquent les actions à effectuer pour les \\hyperref[glossary:PDU]{PDUs} reçues."
+    },
+    "PDR": {
+        "index": "pdr",
+        "print": false,
+        "short": "PDR",
+        "shortpl": "PDRs",
+        "en": "Packet Detection Rule",
+        "enpl": "Packet Detection Rules"
+    },
+    "FAR": {
+        "index": "far",
+        "print": false,
+        "short": "FAR",
+        "shortpl": "FARs",
+        "en": "Forwarding Action Rule",
+        "enpl": "Forwarding Action Rules"
+    },
+    "SGW": {
+        "index": "sgw",
+        "short": "SGW",
+        "alt": "SGW-U/SGW-C",
+        "en": "Serving Gateway",
+        "shortdesc": "en 4G, passerelle entre l’\\hyperref[glossary:eNB]{eNB} et la \\hyperref[glossary:PGW]{PGW}"
+    },
+    "PGW": {
+        "index": "pgw",
+        "short": "PGW",
+        "alt": "PGW-U/PGW-C",
+        "en": "Packet Data Network Gateway",
+        "desc": "En 4G, la PGW sert de passerelle entre la \\hyperref[glossary:SGW]{SGW} et Internet."
+    },
+    "TDF": {
+        "index": "tdf",
+        "short": "TDF",
+        "alt": "TDF-C/TDF-U",
+        "en": "Traffic Detection Function",
+        "desc": "En 4G, la TDF est la fonction d’analyse du trafic (utilisée par exemple pour permettre la facturation)."
+    },
+    "SMF": {
+        "index": "smf",
+        "short": "SMF",
+        "en": "Session Management Function",
+        "shortdesc": "en 5G, \\hyperref[glossary:NF]{fonction} responsable de la gestion des \\hyperref[glossary:PDU Session]{sessions PDU}"
+    },
+    "AMF": {
+        "index": "amf",
+        "short": "AMF",
+        "en": "Access and Mobility Function",
+        "desc": "En 5G, l’AMF est la \\hyperref[glossary:NF]{fonction} responsable de l’accès et de la mobilité. Elle contrôle le \\hyperref[glossary:RAN]{RAN} au travers des interfaces N1 et N2 en utilisant le protocole \\hyperref[glossary:NGAP]{NGAP}."
+    },
+    "UPF": {
+        "index": "upf",
+        "short": "UPF",
+        "en": "Userplane Function",
+        "enpl": "Userplane Functions",
+        "shortpl": "UPFs",
+        "desc": "En 5G, l’UPF est la \\hyperref[glossary:NF]{fonction} de routage des \\hyperref[glossary:PDU]{PDUs} (encapsulées dans des paquets \\hyperref[glossary:GTP]{GTP}) entre le \\hyperref[glossary:RAN]{RAN} et le \\hyperref[glossary:DN]{réseau de données}. L’UPF est configuré par le \\hyperref[glossary:SMF]{SMF} avec le protocole \\hyperref[glossary:PFCP]{PFCP}."
+    },
+    "MME": {
+        "index": "mme",
+        "short": "MME",
+        "en": "Mobility Management Entity",
+        "shortdesc": "en 4G, équipement de gestion de la mobilité"
+    },
+    "HSS": {
+        "index": "hss",
+        "short": "HSS",
+        "en": "Home Subscriber Server",
+        "shortdesc": "En 4G, le HSS est la base assurant le stockage des données propres à chaque abonné"
+    },
+    "UDM": {
+        "index": "udm",
+        "short": "UDM",
+        "en": "Unified Data Management",
+        "desc": "En 5G, l’UDM est une \\hyperref[glossary:NF]{fonction} gérant les données relatives à l’authentification des \\hyperref[glossary:UE]{équipements utilisateur} et aux autorisations d’accès."
+    },
+    "UDR": {
+        "index": "udr",
+        "short": "UDR",
+        "en": "Unified Data Repository",
+        "shortdesc": "en 5G, \\hyperref[glossary:NF]{fonction} de stockage des données relatives à l’\\hyperref[glossary:user]{abonné}"
+    },
+    "AF": {
+        "index": "af",
+        "short": "AF",
+        "en": "Application Function",
+        "enpl": "Application Functions",
+        "shortpl": "AFs",
+        "desc": "En 5G, une AF est une \\hyperref[glossary:NF]{fonction} externe au réseau de l’opérateur. Elle est capable d’interagir avec le cœur de réseau par l’intermédiaire de la \\hyperref[glossary:NEF]{\\textit{Network Exposure Function} (NEF)}."
+    },
+    "PCRF": {
+        "index": "pcrf",
+        "short": "PCRF",
+        "en": "Policy Charging Rule Function",
+        "desc": "En 4G, la PCRF est la fonction responsable de la politique de \\hyperref[glossary:QoS]{QoS} et de la facturation."
+    },
+    "NEF": {
+        "index": "nef",
+        "short": "NEF",
+        "en": "Network Exposure Function",
+        "desc": "En 5G, la NEF est une \\hyperref[glossary:NF]{fonction réseau} permettant d’interfacer le \\hyperref[glossary:CN]{cœur de réseau 5G} avec des fonctions tierces (\\hyperref[glossary:AF]{AFs})."
+    },
+    "NF": {
+        "index": "foction réseau",
+        "short": "NF",
+        "shortpl": "NFs",
+        "fr": "fonction réseau",
+        "frpl": "fonctions réseau",
+        "en": "Network Function",
+        "enpl": "Network Functions",
+        "desc": "Le \\hyperref[glossary:CN]{cœur de réseau 5G} a une \\hyperref[glossary:SBA]{architecture basée sur des services}. Ces services sont rendus au travers de différentes « fonctions réseau ». Parmi les fonctions réseau, on retrouve par exemple l’\\hyperref[glossary:UPF]{UPF}, le \\hyperref[glossary:SMF]{SMF} et l’\\hyperref[glossary:AMF]{AMF}. Toutes les fonctions réseau s’enregistrent au sein d’un annuaire~: le \\hyperref[glossary:NRF]{NRF}." 
+    },
+    "NF-voir": {
+        "print": true,
+        "index": "nf",
+        "short": "NF",
+        "en": "Network Function",
+        "voirref": "NF",
+        "voirlabel": "fonction réseau"
+    },
+    "NRF": {
+        "index": "nrf",
+        "short": "NRF",
+        "en": "Network Repository Function",
+        "shortdesc": "en 5G, annuaire des \\hyperref[glossary:NF]{\\textit{Network Functions}}"
+    },
+    "NSSF": {
+        "index": "nssf",
+        "short": "NSSF",
+        "en": "Network Slice Selection Function",
+        "desc": "En 5G, la NSSF est une \\hyperref[glossary:NF]{fonction réseau} qui sélectionne en se basant sur le \\hyperref[glossary:S-NSSAI]{S-NSSAI} et sur sa propre politique, un ensemble de \\hyperref[glossary:slice]{\\textit{slices}} que l’\\hyperref[glossary:UE]{équipement utilisateur} peut utiliser."
+    },
+    "PCF": {
+        "index": "pcf",
+        "short": "PCF",
+        "en": "Policy Control Function",
+        "shortdesc": "en 5G, \\hyperref[glossary:NF]{fonction} définissant la politique de gestion de trafic"
+    },
+    "CHF": {
+        "index": "chf",
+        "short": "CHF",
+        "en": "Charging Function",
+        "shortdesc": "en 5G, \\hyperref[glossary:NF]{fonction} de facturation"
+    },
+    "PDU": {
+        "index": "pdu",
+        "short": "PDU",
+        "shortpl": "PDUs",
+        "en": "Protocol Data Unit",
+        "enpl": "Protocol Data Units"
+    },
+    "DN": {
+        "index": "réseau de données",
+        "short": "DN",
+        "en": "Data Network",
+        "fr": "réseau de données",
+        "shortdesc": "par exemple, Internet"
+    },
+    "DN-voir": {
+        "print": true,
+        "index": "dn",
+        "short": "DN",
+        "en": "Data Network",
+        "shortdesc": "par exemple, Internet",
+        "voirref": "DN",
+        "voirlabel": "réseau de données"
+    },
+    "PSA": {
+        "index": "psa",
+        "short": "PSA",
+        "en": "PDU Session Anchor",
+        "desc": "En 5G, le PSA est \\hyperref[glossary:UPF]{UPF} situé à l’extrémité d’un chemin à l’interface avec le \\hyperref[glossary:DN]{réseau de données}."
+    },
+    "SSC": {
+        "index": "ssc",
+        "short": "SSC",
+        "en": "Service and Session Continuity",
+        "desc": "Lorsqu’un utilisateur effectue un \\hyperref[glossary:handover]{\\textit{handover}}, son point d’accès au réseau mobile change. Après ce changement, l’\\hyperref[glossary:UPF]{UPF} servant de \\hyperref[glossary:PSA]{\\textit{PDU Session Anchor} (PSA)} qui avait été sélectionné lors de l’établissement de la \\hyperref[glossary:PDU Session]{session~PDU} peut être placé de manière sous-optimale, et il est alors nécessaire d’en sélectionner un autre. Ce changement implique un changement d’adresse~IP pour l’\\hyperref[glossary:UE]{équipement utilisateur}.\n\nSelon l’application, ce changement peut avoir un impact négatif sur l’expérience utilisateur. Il existe 3~modes de gestion de la continuité de service et de session~: le premier consiste à conserver le même \\hyperref[glossary:PSA]{PSA} pendant toute la durée de vie de la \\hyperref[glossary:PDU Session]{session~PDU}, le deuxième consiste à interrompre la \\hyperref[glossary:PDU Session]{session~PDU} puis en créer une nouvelle (\\textit{break-before-make}), et le troisième à créer une nouvelle \\hyperref[glossary:PDU Session]{session~PDU} puis supprimer l’ancienne (\\textit{make-before-break}).",
+        "ref": "sec:mobility"
+    },
+    "user": {
+        "index": "abonné",
+        "fr": "abonné",
+        "fralt": "utilisateur",
+        "frpl": "abonnés",
+        "en": "subscriber",
+        "enpl": "abonnés",
+        "shortdesc": "utilisateur final (\\textit{final user}) d’un réseau mobile"
+    },
+    "AUSF": {
+        "index": "ausf",
+        "short": "AUSF",
+        "en": "Authentication Server Function",
+        "desc": "En 5G, l’AUSF est une \\hyperref[glossary:NF]{fonction} qui authentifie les équipements utilisateur à partir des informations fournies par l’\\hyperref[glossary:UDM]{UDM}."
+    },
+    "SBA": {
+        "index": "architecture basée sur des services",
+        "short": "SBA",
+        "en": "Service Based Architecture",
+        "fr": "architecture basée sur des services",
+        "desc": "Le \\hyperref[glossary:CN]{cœur de réseau} 5G adopte une architecture basée sur des services. Ces services prennent la forme de \\hyperref[glossary:NF]{fonctions réseau} qui exposent des \\hyperref[glossary:API]{APIs} \\hyperref[glossary:REST]{REST}, ce qui facilite le \\hyperref[glossary:scalability]{passage à l’échelle}.",
+        "ref": "sec:SBA"
+    },
+    "SBA-voir": {
+        "print": true,
+        "index": "sba",
+        "short": "SBA",
+        "en": "Service Based Architecture",
+        "voirref": "SBA",
+        "voirlabel": "architecture basée sur des services"
+    },
+    "service/instances": {
+        "index": "service/instances",
+        "fr": "services et instances",
+        "desc": "Un service correspond à un ensemble de fonctionnalités. Lorsqu’on déploie ce même service plusieurs fois sur le réseau, chaque déploiement est appelé une instance du service. Par exemple, un service de synchronisation d’horloges peut être instancié sur plusieurs machines distinctes.",
+        "ref": "sec:service-instances"
+    },
+    "instance": {
+        "print": true,
+        "index":"instance",
+        "fr": "instance",
+        "voirref": "service/instances",
+        "voirlabel": "services et instances"
+    },
+    "controller": {
+        "index": "contrôleur",
+        "fr": "contrôleur",
+        "en": "controller",
+        "shortdesc": "dans le paradigme \\hyperref[glossary:SDN]{SDN}, un contrôleur gère les ressources d’un réseau"
+    },
+    "SLA": {
+        "index": "accord de niveau de service",
+        "short": "SLA",
+        "shortpl": "SLAs",
+        "enpl": "Service Level Agreements",
+        "en": "Service Level Agreement",
+        "fr": "accord de niveau de service",
+        "frpl": "accords de niveau de service",
+        "desc": "Un accord de niveau de service est un contrat entre un opérateur et un \\hyperref[glossary:user]{abonné} définissant le \\hyperref[glossary:QoS]{niveau de service} garanti."
+    },
+    "SLA-voir": {
+        "print": true,
+        "index": "sla",
+        "short": "SLA",
+        "shortpl": "SLAs",
+        "enpl": "Service Level Agreements",
+        "en": "Service Level Agreement",
+        "voirref": "SLA",
+        "voirlabel": "accord de niveau de service"
+    },
+    "ULCL": {
+        "index": "ulcl",
+        "short": "ULCL",
+        "shortpl": "ULCLs",
+        "en": "Uplink Classifier",
+        "enpl": "Uplink Classifiers",
+        "desc": "Le mécanisme d’\\textit{Uplink Classifier} consiste à configurer un ensemble de règles \\hyperref[glossary:PFCP]{PFCP} sur un \\hyperref[glossary:UPF]{UPF} intermédaire pour classifier les \\hyperref[glossary:PDU]{PDUs} selon des critères (par exemple, la destination) afin de les diriger vers un \\hyperref[glossary:DN]{réseau de données} différent (par exemple un réseau local).",
+        "ref": "sec:ULCL"
+    },
+    "MUP": {
+        "index": "mup",
+        "short": "MUP",
+        "en": "Mobile User Plane",
+        "voirref": "CUPS",
+        "voirlabel": "séparation du plan de contrôle et du plan~utilisateur"
+    },
+    "QoS": {
+        "index": "qos",
+        "short": "QoS",
+        "fr": "qualité de service",
+        "en": "Quality of Service",
+        "shortdesc": "mesure de la performance d’un service"
+    },
+    "QoE": {
+        "print": false,
+        "short": "QoE",
+        "en": "Quality of Experience",
+        "fr": "qualité d’expérience"
+    },
+    "DNS": {
+        "index": "dns",
+        "short": "DNS",
+        "en": "Domain Name System",
+        "desc": "DNS est un service d’annuaire distribué sur le réseau. Il sert notamment à la résolution d’adresses~IP à partir de noms de domaine, mais permet également d’y associer d’autres types de données. L’association entre un nom de domaine et une donnée est appelée un «~enregistrement~» (\\textit{Record})."
+    },
+    "DNSSEC": {
+        "index": "dnssec",
+        "short": "DNSSEC",
+        "en": "Domain Name System Security Extensions",
+        "desc": "DNSSEC est une suite d’extensions du protocole \\hyperref[glossary:DNS]{DNS} permettant d’authentifier l’origine des données et de protéger leur intégrité."
+    },
+    "EDNS Client Subnet": {
+        "print": false,
+        "en": "EDNS Client Subnet"
+    },
+    "CU": {
+        "print": true,
+        "index": "cu",
+        "short": "CU",
+        "shortpl": "CUs",
+        "alt": "gNB-CU",
+        "en": "Central Unit",
+        "enpl": "Central Units",
+        "shortdesc": "sous-ensemble d’une \\hyperref[glossary:gNB]{gNB}",
+        "voirref": "CU/DU",
+        "voirlabel": "séparation CU/DU"
+    },
+    "DU": {
+        "print": true,
+        "index": "du",
+        "short": "DU",
+        "short": "DUs",
+        "alt": "gNB-DU",
+        "en": "Distributed Unit",
+        "enpl": "Distributed Units",
+        "shortdesc": "sous-ensemble d’une \\hyperref[glossary:gNB]{gNB}",
+        "voirref": "CU/DU",
+        "voirlabel": "séparation CU/DU"
+    },
+    "RU": {
+        "print": true,
+        "index": "ru",
+        "short": "RU",
+        "shortpl": "RUs",
+        "alt": "gNB-RU",
+        "en": "Radio Unit",
+        "enpl": "Radio Units",
+        "desc": "L’unité radio désigne un sous-ensemble de la \\hyperref[glossary:gNB]{gNB} qui comporte une antenne et est responsable de l’émission et la réception de signaux radio.",
+        "voirref": "CU/DU",
+        "voirlabel": "séparation CU/DU"
+    },
+    "CU/DU": {
+        "print": true,
+        "index": "separation CU/DU",
+        "fr": "Séparation CU/DU",
+        "desc": "Dans le \\hyperref[glossary:RAN]{RAN}~5G, les \\hyperref[glossary:gNB]{gNBs} peuvent être séparées en deux éléments~: une \\hyperref[glossary:CU]{unité centrale (\\textit{Central Unit})} et une ou plusieurs \\hyperref[glossary:DU]{unités distribuées (\\textit{Distributed Units})} qui seront physiquement placées plus proches des \\hyperref[glossary:RU]{unités radio (\\textit{Radio unit}, RU)}.",
+        "ref": "sec:CU/DU"
+    },
+    "GTP": {
+        "index": "gtp",
+        "short": "GTP",
+        "alt": "GTP-U",
+        "en": "GPRS Tunnelling Protocol",
+        "desc": "Ce protocole est utilisé pour encapsuler les \\hyperref[glossary:PDU]{PDUs} qui transitent par le réseau mobile. Dans l’acronyme, GPRS signifie \\textit{General Packet Radio Service}, et le suffixe « U » précise qu’il s’agit de la partie du protocole relative uniquement au plan utilisateur."
+    },
+    "MEC": {
+        "index": "mec",
+        "short": "MEC",
+        "en": "Multi-Access Edge Computing",
+        "enalt": "Mobile Edge Computing",
+        "desc": "Le \\textit{Multi-Access Edge Computing} vise à améliorer la qualité d’expérience de l’utilisateur final en lui permettant d’utiliser les ressources (calcul, stockage, etc.) qui sont les plus pertinentes pour lui à un instant donné, soit en raison de leur proximité, soit en raison d’autres critères (disponibilité, consommation, etc.).",
+        "ref": "sec:MEC"
+    },
+    "slice": {
+        "index": "slice",
+        "en": "slice",
+        "enpl": "slices",
+        "desc": "Une \\textit{slice} est une partition du réseau constituée d’un ensemble de ressources disponibles au sein d’une infrastructure mutualisée. Chaque slice est isolée et gérée indépendamment des autres, et est dédiée à un type de service spécifique.",
+        "ref": "sec:slice"
+    },
+    "TEID": {
+        "index": "teid",
+        "short": "TEID",
+        "shortpl": "TEIDs",
+        "en": "Tunnel Endpoint Identifier",
+        "enpl": "Tunnel Endpoint Identifiers",
+        "shortdesc": "identifiant d’un tunnel (unidirectionnel) pour le protocole \\hyperref[glossary:GTP]{GTP}"
+    },
+    "F-TEID": {
+        "index": "f-teid",
+        "short": "F-TEID",
+        "shortpl": "F-TEIDs",
+        "en": "Fully Qualified Tunnel Endpoint Identifier",
+        "enpl": "Fully Qualified Tunnel Endpoint Identifiers",
+        "desc": "Un F-TEID est l’identifiant qualifié d’un tunnel~\\hyperref[glossary:GTP]{GTP}; il comprend l’adresse~IP de l’entité~\\hyperref[glossary:GTP]{GTP} ainsi que le numéro de tunnel.",
+        "voirlabel": "TEID",
+        "voirref": "TEID"
+    },
+    "SR": {
+        "index": "routage par segment",
+        "short": "SR",
+        "en": "Segment Routing",
+        "fr": "routage par segment",
+        "desc": "Le routage par segment ou \\textit{Segment Routing} consiste à marquer les paquets avec une liste d'instructions appelés segments. Cette liste peut définir à un chemin, où chaque segment correspond à un nœud du réseau. Les routeurs se fondent alors sur cette liste de segments pour prendre la décision de routage.",
+        "ref": "sec:segment-routing"
+    },
+    "SR-voir": {
+        "print": true,
+        "index": "SR",
+        "en": "Segment Routing",
+        "short": "SR",
+        "voirref": "SR",
+        "voirlabel": "routage par segment"
+    },
+    "SRv6": {
+        "index": "srv6",
+        "short": "SRv6",
+        "en": "Segment Routing over IPv6",
+        "shortdesc": "mise en œuvre du \\hyperref[glossary:SR]{\\textit{Segment Routing}} avec le protocole IPv6"
+    },
+    "SID-fr": {
+        "print": true,
+        "index": "identifiant de segment",
+        "short": "SID",
+        "shortpl": "SIDs",
+        "en": "Segment Identifier",
+        "enpl": "Segment Identifiers",
+        "fr": "identifiant de segment",
+        "frpl": "identifiants de segment",
+        "shortdesc": "pour le \\hyperref[glossary:SR]{\\textit{Segment Routing}}"
+    },
+    "SID": {
+        "print": true,
+        "index": "sid",
+        "short": "SID",
+        "shortpl": "SIDs",
+        "en": "Segment Identifier",
+        "enpl": "Segment Identifiers",
+        "shortdesc": "pour le \\hyperref[glossary:SR]{\\textit{Segment Routing}}, identifiant de segment"
+    },
+    "NGAP": {
+        "index": "ngap",
+        "short": "NGAP",
+        "en": "Next Generation Application Protocol",
+        "shortdesc": "protocole de contrôle du \\hyperref[glossary:RAN]{RAN}~5G"
+    },
+    "S-NSSAI": {
+        "index": "s-nssai",
+        "short": "S-NSSAI",
+        "en": "Single Network Slice Selection Assistance Information",
+        "desc": "Le S-NSSAI identifie de manière unique une \\hyperref[glossary:slice]{\\textit{slice}} du réseau. Cet identifiant de 32 bits est composé de deux champs~: le \\textit{Slice/Service Type} (SST), un champ de 8 bits, identifie le type d’application que propose la slice~; les 24 bits restants constituent le champ \\textit{Service Differentiator} (SD) et permettent de différencier les \\hyperref[glossary:slice]{\\textit{slices}} d’un même type."
+    },
+    "handover": {
+        "index": "handover",
+        "en": "Handover",
+        "desc": "Dans un réseau mobile, le \\textit{handover} désigne l’opération de changement de \\hyperref[glossary:BS]{station de base}.",
+        "ref": "sec:mobility"
+    },
+    "BS": {
+        "index": "station de base",
+        "short": "BS",
+        "en": "Base Station",
+        "fr": "station de base",
+        "desc": "La station de base est l’équipement du \\hyperref[glossary:RAN]{RAN} à l’interface entre le \\hyperref[glossary:CN]{cœur de réseau} et les \\hyperref[glossary:UE]{équipements utilisateur}. En 4G, il s’agit de l’\\hyperref[glossary:eNB]{eNB}, et en 5G de la \\hyperref[glossary:gNB]{gNB}."
+    },
+    "BS-voir": {
+        "print": true,
+        "index": "bs",
+        "short": "BS",
+        "en": "Base Station",
+        "voirref": "BS",
+        "voirlabel": "station de base"
+    },
+    "IMSI": {
+        "index": "imsi",
+        "short": "IMSI",
+        "en": "International Mobile Subscriber Identity",
+        "desc": "L’IMSI est un identifiant unique utilisé de l’\\hyperref[glossary:user]{abonné}. Il commence par l’identifiant du pays (\\textit{Mobile Country Code}, MCC) et l’identifiant de l’opérateur (\\textit{Mobile Network Code}, MNC), et fini par l’identifiant de l’abonné au sein de ce réseau (\\textit{Mobile Subscriber Identification Number}, MSIN)."
+    },
+    "scalability": {
+        "index": "passage à l’échelle",
+        "fr": "passage à l’échelle",
+        "en": "Scalability",
+        "desc": "Le passage à l’échelle est la faculté d’un système à maintenir ses fonctionnalités et ses performances indépendamment de l’évolution du nombre d’utilisateurs, de la charge, de la taille du réseau, etc."
+    },
+    "scalability-voir": {
+        "print": true,
+        "index": "scalability",
+        "en": "Scalability",
+        "voirref": "scalability",
+        "voirlabel": "passage à l’échelle"
+    },
+    "API": {
+        "index": "api",
+        "short": "API",
+        "shortpl": "APIs",
+        "en": "Application Programming Interface",
+        "enpl": "Application Programming Interfaces",
+        "desc": "Une API est une interface logicielle permettant à différentes applications de communiquer."
+    },
+    "REST": {
+        "index": "rest",
+        "short": "REST",
+        "alt": "API REST",
+        "en": "Representational State Transfer",
+        "desc": "Un service REST permet de manipuler des ressources web à travers une \\hyperref[glossary:API]{API}. L’accès à cette API peut se faire sans état~: il n’y a pas besoin de maintenir une session entre deux requêtes."
+    },
+    "MIMO": {
+        "print": false,
+        "short": "MIMO",
+        "en": "Multiple-Input, Multiple-Output"
+    },
+    "DSS": {
+        "print": false,
+        "short": "DSS",
+        "en": "Dynamic Spectrum Sharing",
+        "fr": "partage dynamique du spectre"
+    },
+    "CDN": {
+        "print": false,
+        "short": "CDN",
+        "en": "Content Delivery Network",
+        "shortpl": "CDNs",
+        "enpl": "Content Delivery Networks"
+    },
+    "NGAP": {
+        "print": true,
+        "short": "NGAP",
+        "index": "ngap",
+        "en": "Next Generation Application Protocol",
+        "desc": "En 5G, le protocole NGAP est utilisé par l’\\hyperref[glossary:AMF]{AMF} pour contrôler le \\hyperref[glossary:RAN]{RAN}."
+    },
+    "SFC": {
+        "print": false,
+        "index": "chainage de fonctions service",
+        "short": "SFC",
+        "fr": "chaînage de fonctions service",
+        "en": "Service Function Chaining"
+    },
+    "LISP": {
+        "print": true,
+        "index": "lisp",
+        "short": "LISP",
+        "en": "Locator/ID Separation Protocol",
+        "ref": "sec:LISP",
+        "desc": "LISP est un protocole standardisé pour l’\\hyperref[glossary:IETF]{IETF} permettant de découpler l’identifiant des \\hyperref[glossary:EID]{\\textit{endpoints}} de leurs \\hyperref[glossary:RLOC]{localisateurs}, qui servent au routage."
+    },
+    "RLOC": {
+        "print": true,
+        "index": "localisateur de routage",
+        "short": "RLOC",
+        "shortpl": "RLOCs",
+        "en": "Routing Locator",
+        "enpl": "Routing Locators",
+        "fr": "localisateur de routage",
+        "frpl": "localisateurs de routage",
+        "shortdesc": "Dans l’architecture \\hyperref[glossary:LISP]{LISP}, le « localisateur de routage » est une adresse qui correspond à la topologie du réseau."
+    },
+    "RLOC-voir": {
+        "print": true,
+        "index": "rloc",
+        "short": "RLOC",
+        "shortpl": "RLOCs",
+        "en": "Routing Locator",
+        "enpl": "Routing Locators",
+        "voirref": "RLOC",
+        "voirlabel": "localisateur de routage"
+    },
+    "EID": {
+        "print": true,
+        "index": "identificateur d'endpoint",
+        "short": "EID",
+        "shortpl": "EIDs",
+        "en": "Endpoint Identifier",
+        "enpl": "Endpoint Identifiers",
+        "fr": "identificateur d’\\textit{endpoint}",
+        "frpl": "indentificateurs d’\\textit{endpoint}",
+        "desc": "Dans l’architecture \\hyperref[glossary:LISP]{LISP}, un « identificateur d’endpoint » est une adresse indépendante de la topologie du réesau."
+    },
+    "EID-voir": {
+        "print": true,
+        "index": "rloc",
+        "short": "EID",
+        "shortpl": "EIDs",
+        "en": "Endpoint Identifier",
+        "enpl": "Endpoint IDentifiers",
+        "voirref": "EID",
+        "voirlabel": "identificateur d'endpoint"
+    },
+    "DFZ": {
+        "print": false,
+        "short": "DFZ",
+        "en": "Default Free Zone"
+    },
+    "RIR": {
+        "print": false,
+        "short": "RIR",
+        "shortpl": "RIRs",
+        "en": "Regional Internet Registry",
+        "enpl": "Regional Internet Registries",
+        "fr": "registre Internet régional",
+        "frpl": "registres Internet régionaux"
+    },
+    "LIR": {
+        "print": false,
+        "short": "LIR",
+        "shortpl": "LIRs",
+        "en": "Local Internet Registry",
+        "enpl": "Local Internet Registries",
+        "fr": "registre Internet local",
+        "frpl": "registres Internet locaux"
+    },
+    "IANA": {
+        "print": false,
+        "short": "IANA",
+        "en": "Internet Assigned Numbers Authority"
+    },
+    "FAI": {
+        "print": false,
+        "short": "FAI",
+        "shortpl": "FAIs",
+        "fr": "fournisseur d’accès à Internet",
+        "frpl": "fournisseurs d’accès à Internet"
+    },
+    "PI": {
+        "print": false,
+        "short": "PI",
+        "en": "Provider-independant"
+    },
+    "PA": {
+        "print": false,
+        "short": "PA",
+        "en": "Provider-aggregatable"
+    },
+    "CAPIF": {
+        "print": false,
+        "short": "CAPIF",
+        "en": "Common API Framework"
+    },
+    "IETF": {
+        "index": "ietf",
+        "short": "IETF",
+        "en": "Internet Engineering Task Force",
+        "desc": "L’IETF est l’organisme qui élabore la plupart des standards d’Internet, publiés sous la forme de \\textit{Requests for comments} (RFCs).",
+        "ref": "sec:ietf"
+    },
+    "RFC": {
+        "print": false,
+        "short": "RFC",
+        "shortpl": "RFCs",
+        "en": "Request for comments",
+        "enpl": "Requests for comments"
+    },
+    "MPLS": {
+        "print": false,
+        "short": "MPLS",
+        "en": "Multiprotocol Label Switching"
+    },
+    "D2D": {
+        "print": false,
+        "short": "D2D",
+        "en": "device-to-device"
+    },
+    "ELP": {
+        "print": false,
+        "short": "ELP",
+        "en": "Explicit Locator Path"
+    },
+    "SRH": {
+        "print": false,
+        "short": "SRH",
+        "en": "Segment Routing Header",
+        "enpl": "Segment Routing Headers"
+    },
+    "VPP": {
+        "print": false,
+        "short": "VPP",
+        "en": "Vector Packet Processor"
+    },
+    "LEO": {
+        "print": false,
+        "short": "LEO",
+        "en": "Low Earth Orbit"
+    },
+    "TLS": {
+        "print": false,
+        "short": "TLS",
+        "en": "Transport Layer Security"
+    },
+    "DMM": {
+        "print": false,
+        "short": "DMM",
+        "en": "Distributed Mobility Management"
+    },
+    "HMAC": {
+        "print": false,
+        "short": "HMAC",
+        "fr": "authentification de message basé sur le hachage",
+        "en": "Hash-based Message Authentication Code"
+    },
+    "ILP": {
+        "print": false,
+        "short": "ILP",
+        "fr": "optimisation linéaire en nombres entiers",
+        "en": " Integer Linear Programming"
+    },
+    "NLP": {
+        "print": false,
+        "short": "NLP",
+        "fr": "optimisation non linéaire",
+        "en": "Non-Linear Programming"
+    },
+    "B-and-B": {
+        "print": false,
+        "short": "B\\&B",
+        "fr": "algorithme de séparation et évaluation",
+        "en": "Branch and Bound"
+    },
+    "LP": {
+        "print": false,
+        "short": "LP",
+        "fr": "problème d’optimisation linéaire",
+        "en": "Linear Programming"
+    },
+    "SPQ": {
+        "print": false,
+        "short": "SPQ",
+        "en": "Sequential Quadratic Programming"
+    },
+    "DRL": {
+        "print": false,
+        "short": "DRL",
+        "fr": "apprentissage par renforcement profond",
+        "en": " Deep Reinforcement Learning"
+    },
+    "NP-Hard": {
+        "print": false,
+        "en": "NP-Hard",
+        "enpl": "NP-Hard",
+        "fr": "NP-difficile",
+        "frpl": "NP-difficiles"
+    },
+    "offloading": {
+        "print": false,
+        "en": "offloading"
+    },
+    "TE": {
+        "print": false,
+        "short": "TE",
+        "en": "traffic-engineering",
+        "enalt": "traffic steering",
+        "fr": "ingénierie de trafic"
+    },
+    "datacenter": {
+        "print": false,
+        "en": "datacenter",
+        "fr": "centre de données",
+        "enpl": "datacenters",
+        "frpl": "centres de données"
+    },
+    "USRP": {
+        "print": false,
+        "short": "USRP",
+        "shortpl": "USRPs",
+        "fr": "périphérique universel de radio logicielle",
+        "frpl": "périphériques universels de radio logicielle",
+        "en": "Universal Software Radio Peripheral",
+        "enpl": "Universal Software Radio Peripherals"
+    },
+    "voir-edge": {
+        "index": "edge",
+        "print": true,
+        "en": "edge",
+        "enpl": "edge networks",
+        "enalt": "edge",
+        "voirref": "edge",
+        "voirlabel": "réseau de bordure"
+    },
+    "edge": {
+        "index": "réseau de bordure",
+        "en": "edge network",
+        "enpl": "edge networks",
+        "alt": "edge",
+        "fr": "réseau de bordure",
+        "frpl": "réseaux de bordure",
+        "fralt": "réseau~\\textit{edge}",
+        "desc": "Dans le modèle de l’\\textit{edge computing}, les \\textit{edges} sont des réseaux proches de l’\\hyperref[glossary:user]{utilisateur}, qui fournissent à la fois des ressources de stockage et de calcul.",
+        "ref": "sec:edge-computing"
+    },
+    "OWD": {
+        "index": "owd",
+        "print": true,
+        "short": "OWD",
+        "en": "One Way Delay",
+        "shortdesc": "délai unidirectionnel"
+    },
+    "RTT": {
+        "index": "rtt",
+        "short": "RTT",
+        "en": "Round-Trip Time",
+        "shortdesc": "durée entre l’émission d’une requête et la réception de la réponse associée"
+    },
+    "ICMP": {
+        "index": "icmp",
+        "short": "ICMP",
+        "en": "Internet Control Message Protocol"
+    },
+    "NTN-voir": {
+        "index": "ntn",
+        "print": true,
+        "en": "Non-Terrestrial Network",
+        "enpl": "Non-Terrestrial Networks",
+        "voirref": "NTN",
+        "voirlabel": "réseau non-terrestre"
+    },
+    "NTN": {
+        "index": "réseau non-terrestre",
+        "short": "NTN",
+        "en": "Non-Terrestrial Network",
+        "enpl": "Non-Terrestrial Networks",
+        "fr": "réseau non-terrestre",
+        "frpl": "réseaux non-terrestres",
+        "shortdesc": "par exemple, une constellation de satellites"
+    }
+}

@@ -1,0 +1,26 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\begin{resume}
+% Le nombre de caractères de l’abstract doit être inférieur au égal à 4000 caractères (espaces, tabulations et sauts de ligne compris). 
+\begin{enresume}
+Edge computing consists in processing data as close as possible to users in order to overcome some of the limitations of infrastructures based on cloud computing. By bringing computing and storage resources closer to users, it reduces latency, improves quality of experience, and meets the needs of emerging application domains such as smart cities, connected agriculture, autonomous vehicles, and augmented reality.
+
+Although operators are already deploying fifth-generation mobile networks (5G) on a large scale, these networks are paradoxically only weakly integrated, or not integrated at all, with edge computing. Despite standardization efforts, in particular the ETSI multi-access edge computing (MEC) architecture, most open-source 5G core network projects do not yet implement this architecture. Moreover, the proposed integration methods limit both scalability and the operator’s ability to provide quality-of-service (QoS) guarantees.
+
+The objective of this thesis is to propose solutions enabling the strong integration of edge computing into 5G networks. In this context, we propose SR4MEC, an architecture that uses segment routing to steer user traffic toward edge resources. This architecture relies on SRv6 and on the \textit{One Big UPF} abstraction, which presents the entire data plane as a single UPF function from the perspective of the 5G control plane. It therefore remains compatible with existing mechanisms of the 5G core network.
+
+SR4MEC enables the operator to express high-level edge policies that associate a network slice, a geographic area, and a service with a target edge instance or network. These policies are automatically translated into SRv6 routing rules in order to establish the required paths in the data plane. This approach separates the identifier of a service from the identifiers of its instances, makes instance selection transparent to the user equipment, and reduces the number of states and control messages required to establish, modify, or migrate service access paths.
+
+We then propose procedures that take user mobility into account within this architecture. These procedures integrate with 5G network handover mechanisms and make it possible either to preserve the edge instance already in use or to immediately switch instances when the user’s mobility justifies it.
+
+Finally, we present a free and open-source experimentation platform that integrates an implementation of SR4MEC, a controller compatible with an existing 5G core network, as well as SRv6 gateways and endpoints enabling transparent redirection of user traffic. The results obtained show that SR4MEC provides efficient access to service instances close to the user, both during PDU session establishment and during dynamic instance changes or mobility events. 
+\end{enresume}
+
+\begin{enresumeKeywords}
+    5G; Multi-Access Edge Computing Mobile Networks; \\
+    Traffic Steering; Resource Management; Segment Routing
+\end{enresumeKeywords}
+\end{resume}
+\end{document}

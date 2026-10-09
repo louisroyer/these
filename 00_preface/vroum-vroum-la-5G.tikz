@@ -1,0 +1,30 @@
+% SPDX-License-Identifier: CC-BY-SA-4.0
+% SPDX-FileCopyrightText: Louis Royer <infos.louis.royer@gmail.com>
+\begin{tikzpicture}
+  % roue arrière
+  \draw (1,1) circle (0.45cm);
+  \draw (1,1) circle (0.2cm);
+
+  % roue avant
+  \draw (3.3,1) circle (0.45cm);
+  \draw (3.3,1) circle (0.2cm);
+
+  % carrosserie
+  % (en deux fois, parce que j’ai galéré avec l’éditeur graphique de dessins tikz)
+  \draw (1.5,1) arc (0:160:0.5cm)
+.. controls (0.43,1.2) and (0.36,1.16) .. (0.3,1.2) .. controls (0.3,1.5) and (0.3,1.6) .. (0.5,1.9) .. controls (0.8,2.55) and (1,2.6) .. (1.4,2.7) .. controls (2,2.8) and (2.6,2.8) .. (2.8,1.9) ..  controls (4.2,1.8) and (3.8,1.9) .. (3.9,1.2) .. controls (3.8,1.2) and (3.8,1.2) .. (3.76,1.18);
+  \draw (1.495,1) -- (2.8,1) arc (180:20:0.5cm);
+
+  % vitre avant
+  \draw (2.6,2) -- (1.8,2) -- (1.8,2.55) -- (2.2,2.55) .. controls (2.2,2.5)  and (2.6,2.4) .. (2.6,2);
+
+  % vitre arrière
+  \draw (0.85,2) -- (1.6,2) -- (1.6,2.55).. controls (1.1,2.5) and (1,2.4) .. (0.85,2);
+
+  % ondes 5G (il y en a 5 parce que c’est la 5G)
+  \coordinate (O) at (2.6,2.5);
+  \foreach \r in {0.4,0.6,0.8,1.0,1.2} {
+    \draw (O) ++(0,\r) arc[start angle=90,end angle=0,radius=\r];
+  }
+
+\end{tikzpicture}
